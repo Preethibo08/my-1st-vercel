@@ -1,6 +1,68 @@
-<html>
-  <head>
-    <title>my first vercel</title>
-  </head>
-  <body>hello vercel</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple SPA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    #content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Single Page App</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('about')">About</a>
+    <a href="#" onclick="navigate('contact')">Contact</a>
+  </nav>
+
+  <div id="content">
+    <!-- Dynamic content will appear here -->
+  </div>
+
+  <script>
+    const pages = {
+      home: `
+        <h2>Welcome to My SPA</h2>
+        <p>This is the home page of a simple single-page application.</p>
+      `,
+      about: `
+        <h2>About Me</h2>
+        <p>I'm learning to build SPAs using only HTML, CSS, and JavaScript.</p>
+      `,
+      contact: `
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+      `
